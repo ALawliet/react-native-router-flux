@@ -420,7 +420,7 @@ class NavBar extends React.Component {
           this.props.titleWrapperStyle,
         ]}
       >
-        <Animated.Text
+        <Text
           lineBreakMode="tail"
           numberOfLines={1}
           {...this.props.titleProps}
@@ -429,24 +429,10 @@ class NavBar extends React.Component {
             this.props.titleStyle,
             this.props.navigationState.titleStyle,
             childState.titleStyle,
-            {
-              opacity: this.props.position.interpolate({
-                inputRange: [index - 1, index, index + 1],
-                outputRange: [0, this.props.titleOpacity, 0],
-              }),
-              left: this.props.position.interpolate({
-                inputRange: [index - 1, index + 1],
-                outputRange: [200, -200],
-              }),
-              right: this.props.position.interpolate({
-                inputRange: [index - 1, index + 1],
-                outputRange: [-200, 200],
-              }),
-            },
           ]}
         >
           {title}
-        </Animated.Text>
+        </Text>
       </Animated.View>
     );
   }
