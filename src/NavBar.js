@@ -420,7 +420,7 @@ class NavBar extends React.Component {
           this.props.titleWrapperStyle,
         ]}
       >
-        <Text
+        <Animated.Text
           lineBreakMode="tail"
           numberOfLines={1}
           {...this.props.titleProps}
@@ -432,7 +432,7 @@ class NavBar extends React.Component {
           ]}
         >
           {title}
-        </Text>
+        </Animated.Text>
       </Animated.View>
     );
   }

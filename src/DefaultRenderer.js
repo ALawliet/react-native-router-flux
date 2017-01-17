@@ -318,7 +318,7 @@ export default class DefaultRenderer extends Component {
           if (duration === 0) {
             pos.setValue(navState.index);
           } else {
-            Animated.timing(pos, { toValue: navState.index, duration }).start();
+            Animated.timing(pos, { toValue: navState.index, duration, useNativeDriver: true }).start();
           }
         };
       }
